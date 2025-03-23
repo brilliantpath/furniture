@@ -1,57 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-    <title>brilliantpath</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funky Furniture World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            background: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            background: white;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .reviews {
+            font-style: italic;
+            color: #555;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #555;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>You have the freedom to build the house of your dreams!</h1>
-    <img src="https://media.istockphoto.com/id/459066815/photo/couple-putting-together-self-assembly-furniture-in-new-home.jpg?s=612x612&w=0&k=20&c=1ozEnXav5VqjAYL1F1kw03eUDV_3thBnOFHtIsxXlWI=" alt="Couple assembling furniture">
-    <h2>Why not start now?</h2>
-    <div class='dream'>
-    <h1>Welcome to the Dream House Furniture Show!</h1>
-    <p>So, you've decided to build the house of your dreams?<br>
-    Well, guess what? It's not just about the walls and roof.<br>
-    Nope, it's all about the **furniture**! That's right! 
-    Imagine lounging on a couch that *actually* supports 
-    your Netflix binge sessions...or having a dining table 
-    that doesn’t wobble like a Jenga tower after your Sunday roast. 
-    Dreamy, huh?</p>
-    </div>
-    <div class='talk'>
-     <h2>Let's Talk Prices!</h2>
-     <p>You're thinking, “Building my dream house sounds expensive!” 
-      Well, it is...but don't worry, we've got prices that won’t require 
-      a second mortgage. Whether it's a $200 recliner or a $2,000 luxury 
-      sofa that makes you feel like royalty (without the actual castle), 
-      we’ve got you covered. And don't even get us started on the 
-      *discounts*...they're practically a steal. 😉</p>
-    </div>
-    <div class='feeling'>
-      <h2>Feeling at Home?</h2>
-      <p>What’s better than walking into your home and feeling like 
-      you've just stepped into a Pinterest board? Exactly. But the secret
-      is the furniture. Pick a couch that matches your vibe, a coffee 
-      table that says, "I’m fancy but down to earth," and throw in a rug
-      that screams, “I have my life together!” Oh, and the best part? 
-      You don’t even need to assemble everything yourself 
-      (unless you’re into that sort of thing...no judgment).
-      We've got experts for that!</p>
-    </div>
-    <div class='why wait'>
-      <h2>Why Wait? Build Your Dream Home NOW!</h2>
-      <p>Don't let your dream house stay a dream. 
-      It’s time to make it real. Get the right furniture, pick up a 
-      paintbrush, and create a space that feels like YOU. And who knows? 
-      You might even end up spending more time on your couch than you do 
-      in the kitchen (totally normal, right?).</p>
-    </div>
-    <div class='contact'>
-      <h3>Contact Us</h3>
-      <p>Ready to make your dream house a reality? We’re just a click away!</p>
-      <p>Email: celdney12@gmail.com</p>
-      <p>Phone: 927444593</p>
-    </div>
+    <header>
+        <h1>Welcome to Funky Furniture World!</h1>
+        <p>Where chairs have feelings, and sofas are life partners.</p>
+    </header>
+
+    <nav>
+        <a href="#living-room">Living Room</a>
+        <a href="#bedroom">Bedroom</a>
+        <a href="#toilet">Toilet</a>
+        <a href="#dining">Dining</a>
+        <a href="#outdoor">Outdoor</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="living-room">
+            <h2>Living Room Wonders</h2>
+            <img src="https://via.placeholder.com/400" alt="Cozy Sofa" onclick="changeImage(this, 'sofa')">
+            <p><strong>The Couch Potato Throne!</strong> A sofa so comfy, you'll forget what outside looks like.</p>
+        </section>
+
+        <section id="bedroom">
+            <h2>Bedroom Bliss</h2>
+            <img src="https://via.placeholder.com/400" alt="Luxury Bed" onclick="changeImage(this, 'bed')">
+            <p><strong>The Cloud Bed 3000™</strong> – So soft, it might file a missing person's report on you.</p>
+        </section>
+
+        <section id="toilet">
+            <h2>Toilet Time Luxury</h2>
+            <img src="https://via.placeholder.com/400" alt="Fancy Toilet" onclick="changeImage(this, 'toilet')">
+            <p><strong>The Throne of Thrones!</strong> Because even your royal behind deserves a seat of honor.</p>
+        </section>
+
+        <section id="dining">
+            <h2>Dining Room Drama</h2>
+            <img src="https://via.placeholder.com/400" alt="Elegant Dining Table" onclick="changeImage(this, 'table')">
+            <p><strong>The Feast Table 9000™</strong> – Big enough for family, small enough to avoid political debates.</p>
+        </section>
+
+        <section id="outdoor">
+            <h2>Outdoor Furniture</h2>
+            <img src="https://via.placeholder.com/400" alt="Garden Chair" onclick="changeImage(this, 'chair')">
+            <p><strong>The Lawn King Lounger!</strong> For those who love fresh air but also love avoiding physical activity.</p>
+        </section>
+
+        <section id="reviews">
+            <h2>What Our Customers Say</h2>
+            <button onclick="toggleReviews()">Show/Hide Reviews</button>
+            <div class="reviews">
+                <p>⭐⭐⭐⭐⭐ "This couch is so soft, my cat thinks it's a kingdom!" – Karen from Ohio</p>
+                <p>⭐⭐⭐⭐ "Bought the toilet seat... now I spend 30 extra minutes in there. Worth it." – Dave from Texas</p>
+                <p>⭐⭐⭐⭐⭐ "The bed is so good, I quit my job. Sleeping is my life now." – Alice from New York</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Need a Furniture Tip?</h2>
+            <button onclick="showTip()">Get a Random Tip</button>
+            <p id="tip"></p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>📧 Email: contact@funkyfurniture.com</p>
+            <p>📞 Phone: +123-456-7890</p>
+            <p>📍 Location: Somewhere between your dreams and Ikea.</p>
+            <p><strong>Follow us:</strong>  
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Twitter</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Funky Furniture World. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleReviews() {
+            let reviews = document.querySelector('.reviews');
+            if (reviews.style.display === "none") {
+                reviews.style.display = "block";
+            } else {
+                reviews.style.display = "none";
+            }
+        }
+
+        function changeImage(element, type) {
+            let images = {
+                sofa: "https://via.placeholder.com/400/ff6347", 
+                bed: "https://via.placeholder.com/400/4682b4",
+                toilet: "https://via.placeholder.com/400/32cd32",
+                table: "https://via.placeholder.com/400/ffa500",
+                chair: "https://via.placeholder.com/400/8a2be2"
+            };
+            element.src = images[type];
+        }
+
+        function showTip() {
+            let tips = [
+                "A good sofa should make you feel like a king, not a rock climber.",
+                "Your bed should be so comfy, it should apologize for waking you up.",
+                "A dining table should survive Thanksgiving dinner and family drama.",
+                "Outdoor chairs should be weather-resistant, just like your patience.",
+                "Toilet seats should be comfy enough to scroll social media for hours."
+            ];
+            let randomTip = tips[Math.floor(Math.random() * tips.length)];
+            document.getElementById("tip").innerText = randomTip;
+        }
+    </script>
+
 </body>
 </html>
