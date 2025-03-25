@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funky Fashion Elite</title>
+    <title>Funky Fashion Hub</title>
     <style>
-        /* Configuração Geral */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Helvetica Neue', sans-serif;
         }
 
         body {
-            background-color: #f4f4f4;
-            color: #222;
-        }
-
-        /* Cabeçalho */
-        header {
-            background: linear-gradient(to right, #1a1a1a, #444);
-            color: white;
+            background-color: #f8f8f8;
+            color: #333;
             text-align: center;
-            padding: 30px 0;
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
         }
 
-        /* Navegação */
+        header {
+            background: #000;
+            color: white;
+            padding: 25px 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
         nav {
             background: #222;
             padding: 15px;
@@ -39,7 +35,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 20px;
+            margin: 15px;
             font-size: 18px;
             font-weight: 500;
             transition: color 0.3s ease-in-out;
@@ -49,19 +45,17 @@
             color: #f4a261;
         }
 
-        /* Estrutura Principal */
         main {
             max-width: 1200px;
-            margin: 50px auto;
+            margin: 40px auto;
         }
 
         section {
             background: white;
-            padding: 50px;
-            margin-bottom: 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
 
@@ -71,33 +65,39 @@
 
         h2 {
             margin-bottom: 20px;
-            font-size: 28px;
-            color: #333;
+            font-size: 26px;
+            color: #222;
         }
 
-        /* Imagens */
         img {
             width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
+            max-width: 450px;
+            border-radius: 8px;
+            transition: opacity 0.3s ease-in-out;
             cursor: pointer;
         }
 
         img:hover {
-            transform: scale(1.05);
+            opacity: 0.8;
         }
 
-        /* Botões */
+        .reviews, .blog-post {
+            font-style: italic;
+            color: #666;
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+
         button {
             padding: 12px 20px;
             font-size: 16px;
-            background: #1a1a1a;
+            background: #000;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 6px;
+            border-radius: 5px;
             transition: background 0.3s ease-in-out;
             margin-top: 15px;
         }
@@ -106,32 +106,20 @@
             background: #444;
         }
 
-        /* Depoimentos */
-        .reviews {
-            font-style: italic;
-            color: #666;
-            background: #f0f0f0;
-            padding: 20px;
-            border-radius: 10px;
-            display: none;
-        }
-
-        /* Rodapé */
         footer {
-            background: #1a1a1a;
+            background: #000;
             color: white;
-            padding: 30px;
-            text-align: center;
-            margin-top: 50px;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
         }
 
-        footer a {
+        a {
             color: #f4a261;
             text-decoration: none;
-            margin: 0 10px;
         }
 
-        footer a:hover {
+        a:hover {
             text-decoration: underline;
         }
     </style>
@@ -139,7 +127,7 @@
 <body>
 
     <header>
-        Funky Fashion Elite - Sofisticação e Estilo
+        Funky Fashion Hub
     </header>
 
     <nav>
@@ -147,6 +135,9 @@
         <a href="#formal">Formal</a>
         <a href="#shoes">Calçados</a>
         <a href="#accessories">Acessórios</a>
+        <a href="#trends">Tendências</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#blog">Blog</a>
         <a href="#reviews">Depoimentos</a>
         <a href="#contact">Contato</a>
     </nav>
@@ -155,55 +146,73 @@
 
         <section id="casual">
             <h2>Moda Casual</h2>
-            <img src="https://via.placeholder.com/500" alt="Roupa Casual" onclick="changeImage(this, 'casual')">
-            <p>Conforto e estilo para o dia a dia. Tecidos leves, cortes modernos e design exclusivo.</p>
+            <img src="https://via.placeholder.com/450" alt="Roupa Casual">
+            <p>Conforto e estilo para o dia a dia.</p>
         </section>
 
         <section id="formal">
             <h2>Moda Formal</h2>
-            <img src="https://via.placeholder.com/500" alt="Roupa Formal" onclick="changeImage(this, 'formal')">
-            <p>Elegância e sofisticação para eventos e negócios. Ajustes sob medida e tecidos de alta qualidade.</p>
+            <img src="https://via.placeholder.com/450" alt="Roupa Formal">
+            <p>Elegância para eventos e negócios.</p>
         </section>
 
         <section id="shoes">
             <h2>Calçados</h2>
-            <img src="https://via.placeholder.com/500" alt="Calçado Estiloso" onclick="changeImage(this, 'shoes')">
-            <p>Estilo do clássico ao contemporâneo. Conforto premium para qualquer ocasião.</p>
+            <img src="https://via.placeholder.com/450" alt="Calçado Estiloso">
+            <p>Escolha o par perfeito para cada ocasião.</p>
         </section>
 
         <section id="accessories">
             <h2>Acessórios</h2>
-            <img src="https://via.placeholder.com/500" alt="Acessórios Fashion" onclick="changeImage(this, 'accessories')">
-            <p>Detalhes que elevam seu look. Desde relógios sofisticados até bolsas elegantes.</p>
+            <img src="https://via.placeholder.com/450" alt="Acessórios Fashion">
+            <p>Pequenos detalhes que fazem toda a diferença.</p>
+        </section>
+
+        <section id="trends">
+            <h2>Tendências</h2>
+            <p>Descubra as tendências que estão bombando este ano!</p>
+            <button onclick="showTrend()">Ver Tendência</button>
+            <p id="trend"></p>
+        </section>
+
+        <section id="gallery">
+            <h2>Galeria de Estilos</h2>
+            <p>Confira inspirações de looks incríveis:</p>
+            <img src="https://via.placeholder.com/450" alt="Look Inspirador">
+        </section>
+
+        <section id="blog">
+            <h2>Blog de Moda</h2>
+            <button onclick="toggleBlog()">Ler Artigo</button>
+            <div class="blog-post">
+                <p>📝 "Como combinar peças básicas e ainda assim arrasar no look!"</p>
+            </div>
         </section>
 
         <section id="reviews">
             <h2>O que dizem nossos clientes</h2>
             <button onclick="toggleReviews()">Ver Depoimentos</button>
             <div class="reviews">
-                <p>⭐⭐⭐⭐⭐ "Qualidade impecável, me senti um modelo de passarela!" – Maria C.</p>
-                <p>⭐⭐⭐⭐⭐ "O melhor blazer que já comprei. Corte perfeito!" – Lucas M.</p>
-                <p>⭐⭐⭐⭐⭐ "Os sapatos são extremamente confortáveis e estilosos." – Ana R.</p>
+                <p>⭐⭐⭐⭐⭐ "As roupas são incríveis e o atendimento impecável!" – Camila S.</p>
             </div>
+        </section>
+
+        <section>
+            <h2>Precisa de uma dica de estilo?</h2>
+            <button onclick="showTip()">Obter Dica</button>
+            <p id="tip"></p>
         </section>
 
         <section id="contact">
             <h2>Entre em Contato</h2>
             <p>📧 Email: celdney12@gmail.com</p>
             <p>📞 Telefone: +351 927444593</p>
-            <p>📍 Localização: Entre o estilo e a sofisticação.</p>
-            <p><strong>Siga-nos:</strong>  
-                <a href="#">Facebook</a> | 
-                <a href="#">Instagram</a> | 
-                <a href="#">LinkedIn</a>
-            </p>
         </section>
 
     </main>
 
     <footer>
-        &copy; 2025 Funky Fashion Elite. Todos os direitos reservados.  
-        <br> <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
+        &copy; 2025 Funky Fashion Hub. Todos os direitos reservados.
     </footer>
 
     <script>
@@ -212,14 +221,25 @@
             reviews.style.display = reviews.style.display === "none" ? "block" : "none";
         }
 
-        function changeImage(element, type) {
-            let images = {
-                casual: "https://via.placeholder.com/500/ff6347", 
-                formal: "https://via.placeholder.com/500/4682b4",
-                shoes: "https://via.placeholder.com/500/32cd32",
-                accessories: "https://via.placeholder.com/500/ffa500"
-            };
-            element.src = images[type];
+        function toggleBlog() {
+            let blog = document.querySelector('.blog-post');
+            blog.style.display = blog.style.display === "none" ? "block" : "none";
+        }
+
+        function showTip() {
+            let tips = [
+                "Cores neutras são versáteis e atemporais.",
+                "O equilíbrio entre conforto e elegância é a chave do estilo."
+            ];
+            document.getElementById("tip").innerText = tips[Math.floor(Math.random() * tips.length)];
+        }
+
+        function showTrend() {
+            let trends = [
+                "Moda oversized está em alta!",
+                "Tons terrosos são a tendência do momento."
+            ];
+            document.getElementById("trend").innerText = trends[Math.floor(Math.random() * trends.length)];
         }
     </script>
 
