@@ -69,41 +69,55 @@
             color: #222;
         }
 
-        img {
+        /* Estilização do carrossel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
             width: 100%;
             max-width: 450px;
             border-radius: 8px;
-            transition: opacity 0.3s ease-in-out;
-            cursor: pointer;
         }
 
-        img:hover {
-            opacity: 0.8;
-        }
-
-        .reviews, .blog-post {
-            font-style: italic;
-            color: #666;
-            background: #f0f0f0;
-            padding: 20px;
-            border-radius: 8px;
-            display: none;
-        }
-
-        button {
-            padding: 12px 20px;
+        .details {
             font-size: 16px;
-            background: #000;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
             border: none;
+            padding: 10px;
             cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s ease-in-out;
-            margin-top: 15px;
+            border-radius: 50%;
+            font-size: 18px;
         }
 
-        button:hover {
-            background: #444;
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 5px;
+        }
+
+        .next {
+            right: 5px;
         }
 
         footer {
@@ -112,15 +126,6 @@
             padding: 20px;
             margin-top: 40px;
             font-size: 14px;
-        }
-
-        a {
-            color: #f4a261;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -135,78 +140,77 @@
         <a href="#formal">Formal</a>
         <a href="#shoes">Calçados</a>
         <a href="#accessories">Acessórios</a>
-        <a href="#trends">Tendências</a>
-        <a href="#gallery">Galeria</a>
-        <a href="#blog">Blog</a>
-        <a href="#reviews">Depoimentos</a>
-        <a href="#contact">Contato</a>
     </nav>
 
     <main>
 
+        <!-- Seção Casual -->
         <section id="casual">
             <h2>Moda Casual</h2>
-            <img src="https://via.placeholder.com/450" alt="Roupa Casual">
-            <p>Conforto e estilo para o dia a dia.</p>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel-casual">
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Look Casual 1">
+                        <p class="details">Camisa branca e jeans confortável.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Look Casual 2">
+                        <p class="details">Vestido floral para o dia a dia.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Look Casual 3">
+                        <p class="details">Moletom estiloso e calça jogger.</p>
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="slide('casual', -1)">&#10094;</button>
+                <button class="carousel-button next" onclick="slide('casual', 1)">&#10095;</button>
+            </div>
         </section>
 
+        <!-- Seção Formal -->
         <section id="formal">
             <h2>Moda Formal</h2>
-            <img src="https://via.placeholder.com/450" alt="Roupa Formal">
-            <p>Elegância para eventos e negócios.</p>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel-formal">
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Roupa Formal 1">
+                        <p class="details">Terno clássico azul-marinho.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Roupa Formal 2">
+                        <p class="details">Vestido preto elegante.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Roupa Formal 3">
+                        <p class="details">Camisa social e calça alfaiataria.</p>
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="slide('formal', -1)">&#10094;</button>
+                <button class="carousel-button next" onclick="slide('formal', 1)">&#10095;</button>
+            </div>
         </section>
 
+        <!-- Seção Calçados -->
         <section id="shoes">
             <h2>Calçados</h2>
-            <img src="https://via.placeholder.com/450" alt="Calçado Estiloso">
-            <p>Escolha o par perfeito para cada ocasião.</p>
-        </section>
-
-        <section id="accessories">
-            <h2>Acessórios</h2>
-            <img src="https://via.placeholder.com/450" alt="Acessórios Fashion">
-            <p>Pequenos detalhes que fazem toda a diferença.</p>
-        </section>
-
-        <section id="trends">
-            <h2>Tendências</h2>
-            <p>Descubra as tendências que estão bombando este ano!</p>
-            <button onclick="showTrend()">Ver Tendência</button>
-            <p id="trend"></p>
-        </section>
-
-        <section id="gallery">
-            <h2>Galeria de Estilos</h2>
-            <p>Confira inspirações de looks incríveis:</p>
-            <img src="https://via.placeholder.com/450" alt="Look Inspirador">
-        </section>
-
-        <section id="blog">
-            <h2>Blog de Moda</h2>
-            <button onclick="toggleBlog()">Ler Artigo</button>
-            <div class="blog-post">
-                <p>📝 "Como combinar peças básicas e ainda assim arrasar no look!"</p>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel-shoes">
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Calçado 1">
+                        <p class="details">Tênis casual branco.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Calçado 2">
+                        <p class="details">Sapato social clássico.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Calçado 3">
+                        <p class="details">Bota estilosa de couro.</p>
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="slide('shoes', -1)">&#10094;</button>
+                <button class="carousel-button next" onclick="slide('shoes', 1)">&#10095;</button>
             </div>
-        </section>
-
-        <section id="reviews">
-            <h2>O que dizem nossos clientes</h2>
-            <button onclick="toggleReviews()">Ver Depoimentos</button>
-            <div class="reviews">
-                <p>⭐⭐⭐⭐⭐ "As roupas são incríveis e o atendimento impecável!" – Camila S.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Precisa de uma dica de estilo?</h2>
-            <button onclick="showTip()">Obter Dica</button>
-            <p id="tip"></p>
-        </section>
-
-        <section id="contact">
-            <h2>Entre em Contato</h2>
-            <p>📧 Email: celdney12@gmail.com</p>
-            <p>📞 Telefone: +351 927444593</p>
         </section>
 
     </main>
@@ -216,30 +220,10 @@
     </footer>
 
     <script>
-        function toggleReviews() {
-            let reviews = document.querySelector('.reviews');
-            reviews.style.display = reviews.style.display === "none" ? "block" : "none";
-        }
-
-        function toggleBlog() {
-            let blog = document.querySelector('.blog-post');
-            blog.style.display = blog.style.display === "none" ? "block" : "none";
-        }
-
-        function showTip() {
-            let tips = [
-                "Cores neutras são versáteis e atemporais.",
-                "O equilíbrio entre conforto e elegância é a chave do estilo."
-            ];
-            document.getElementById("tip").innerText = tips[Math.floor(Math.random() * tips.length)];
-        }
-
-        function showTrend() {
-            let trends = [
-                "Moda oversized está em alta!",
-                "Tons terrosos são a tendência do momento."
-            ];
-            document.getElementById("trend").innerText = trends[Math.floor(Math.random() * trends.length)];
+        function slide(category, direction) {
+            let carousel = document.getElementById("carousel-" + category);
+            let scrollAmount = 450 * direction;
+            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
     </script>
 
