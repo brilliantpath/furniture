@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funky Fashion Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
 
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background: #000;
+            color: white;
+            padding: 25px 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav {
+            background: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #f4a261;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #222;
+        }
+
+        /* Estilização do carrossel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 8px;
+        }
+
+        .details {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 5px;
+        }
+
+        .next {
+            right: 5px;
+        }
+
+        footer {
+            background: #000;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Funky Fashion Hub
+    </header>
+
+    <nav>
+        <a href="#casual">Casual</a>
+        <a href="#formal">Formal</a>
+        <a href="#shoes">Calçados</a>
+        <a href="#accessories">Acessórios</a>
+    </nav>
+
+    <main>
+
+        <!-- Seção Casual -->
+        <section id="casual">
+            <h2>Moda Casual</h2>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel-casual">
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Look Casual 1">
+                        <p class="details">Camisa branca e jeans confortável.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Look Casual 2">
+                        <p class="details">Vestido floral para o dia a dia.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Look Casual 3">
+                        <p class="details">Moletom estiloso e calça jogger.</p>
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="slide('casual', -1)">&#10094;</button>
+                <button class="carousel-button next" onclick="slide('casual', 1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Seção Formal -->
+        <section id="formal">
+            <h2>Moda Formal</h2>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel-formal">
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Roupa Formal 1">
+                        <p class="details">Terno clássico azul-marinho.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Roupa Formal 2">
+                        <p class="details">Vestido preto elegante.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Roupa Formal 3">
+                        <p class="details">Camisa social e calça alfaiataria.</p>
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="slide('formal', -1)">&#10094;</button>
+                <button class="carousel-button next" onclick="slide('formal', 1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Seção Calçados -->
+        <section id="shoes">
+            <h2>Calçados</h2>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel-shoes">
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Calçado 1">
+                        <p class="details">Tênis casual branco.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Calçado 2">
+                        <p class="details">Sapato social clássico.</p>
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/450" alt="Calçado 3">
+                        <p class="details">Bota estilosa de couro.</p>
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="slide('shoes', -1)">&#10094;</button>
+                <button class="carousel-button next" onclick="slide('shoes', 1)">&#10095;</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 Funky Fashion Hub. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function slide(category, direction) {
+            let carousel = document.getElementById("carousel-" + category);
+            let scrollAmount = 450 * direction;
+            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
