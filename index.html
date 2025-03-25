@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funky Fashion Hub</title>
+    <title>Funky Fashion Elite</title>
     <style>
+        /* Configuração Geral */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: #f8f8f8;
-            color: #333;
-            text-align: center;
+            background-color: #f4f4f4;
+            color: #222;
         }
 
+        /* Cabeçalho */
         header {
-            background: #000;
+            background: linear-gradient(to right, #1a1a1a, #444);
             color: white;
-            padding: 25px 0;
-            font-size: 22px;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 24px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
+        /* Navegação */
         nav {
             background: #222;
             padding: 15px;
@@ -35,7 +39,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 15px;
+            margin: 20px;
             font-size: 18px;
             font-weight: 500;
             transition: color 0.3s ease-in-out;
@@ -45,17 +49,19 @@
             color: #f4a261;
         }
 
+        /* Estrutura Principal */
         main {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 50px auto;
         }
 
         section {
             background: white;
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
             transition: transform 0.3s ease-in-out;
         }
 
@@ -65,39 +71,33 @@
 
         h2 {
             margin-bottom: 20px;
-            font-size: 26px;
-            color: #222;
+            font-size: 28px;
+            color: #333;
         }
 
+        /* Imagens */
         img {
             width: 100%;
-            max-width: 450px;
-            border-radius: 8px;
-            transition: opacity 0.3s ease-in-out;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
             cursor: pointer;
         }
 
         img:hover {
-            opacity: 0.8;
+            transform: scale(1.05);
         }
 
-        .reviews {
-            font-style: italic;
-            color: #666;
-            background: #f0f0f0;
-            padding: 20px;
-            border-radius: 8px;
-            display: none;
-        }
-
+        /* Botões */
         button {
             padding: 12px 20px;
             font-size: 16px;
-            background: #000;
+            background: #1a1a1a;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 6px;
             transition: background 0.3s ease-in-out;
             margin-top: 15px;
         }
@@ -106,20 +106,32 @@
             background: #444;
         }
 
-        footer {
-            background: #000;
-            color: white;
+        /* Depoimentos */
+        .reviews {
+            font-style: italic;
+            color: #666;
+            background: #f0f0f0;
             padding: 20px;
-            margin-top: 40px;
-            font-size: 14px;
+            border-radius: 10px;
+            display: none;
         }
 
-        a {
+        /* Rodapé */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
             color: #f4a261;
             text-decoration: none;
+            margin: 0 10px;
         }
 
-        a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
@@ -127,7 +139,7 @@
 <body>
 
     <header>
-        Funky Fashion Hub
+        Funky Fashion Elite - Sofisticação e Estilo
     </header>
 
     <nav>
@@ -143,49 +155,43 @@
 
         <section id="casual">
             <h2>Moda Casual</h2>
-            <img src="https://via.placeholder.com/450" alt="Roupa Casual" onclick="changeImage(this, 'casual')">
-            <p>Conforto e estilo para o dia a dia. Sinta-se bem sem perder a elegância.</p>
+            <img src="https://via.placeholder.com/500" alt="Roupa Casual" onclick="changeImage(this, 'casual')">
+            <p>Conforto e estilo para o dia a dia. Tecidos leves, cortes modernos e design exclusivo.</p>
         </section>
 
         <section id="formal">
             <h2>Moda Formal</h2>
-            <img src="https://via.placeholder.com/450" alt="Roupa Formal" onclick="changeImage(this, 'formal')">
-            <p>Elegância para eventos e negócios. Vista-se com confiança.</p>
+            <img src="https://via.placeholder.com/500" alt="Roupa Formal" onclick="changeImage(this, 'formal')">
+            <p>Elegância e sofisticação para eventos e negócios. Ajustes sob medida e tecidos de alta qualidade.</p>
         </section>
 
         <section id="shoes">
             <h2>Calçados</h2>
-            <img src="https://via.placeholder.com/450" alt="Calçado Estiloso" onclick="changeImage(this, 'shoes')">
-            <p>Dos clássicos aos modernos, escolha o par perfeito para cada ocasião.</p>
+            <img src="https://via.placeholder.com/500" alt="Calçado Estiloso" onclick="changeImage(this, 'shoes')">
+            <p>Estilo do clássico ao contemporâneo. Conforto premium para qualquer ocasião.</p>
         </section>
 
         <section id="accessories">
             <h2>Acessórios</h2>
-            <img src="https://via.placeholder.com/450" alt="Acessórios Fashion" onclick="changeImage(this, 'accessories')">
-            <p>Pequenos detalhes que fazem toda a diferença no seu look.</p>
+            <img src="https://via.placeholder.com/500" alt="Acessórios Fashion" onclick="changeImage(this, 'accessories')">
+            <p>Detalhes que elevam seu look. Desde relógios sofisticados até bolsas elegantes.</p>
         </section>
 
         <section id="reviews">
             <h2>O que dizem nossos clientes</h2>
             <button onclick="toggleReviews()">Ver Depoimentos</button>
             <div class="reviews">
-                <p>⭐⭐⭐⭐⭐ "As roupas são incríveis e o atendimento impecável!" – Camila S.</p>
-                <p>⭐⭐⭐⭐⭐ "O sapato mais confortável que já usei. Valeu cada centavo!" – João P.</p>
-                <p>⭐⭐⭐⭐⭐ "Meu look formal nunca esteve tão sofisticado. Recomendo muito!" – Fernanda M.</p>
+                <p>⭐⭐⭐⭐⭐ "Qualidade impecável, me senti um modelo de passarela!" – Maria C.</p>
+                <p>⭐⭐⭐⭐⭐ "O melhor blazer que já comprei. Corte perfeito!" – Lucas M.</p>
+                <p>⭐⭐⭐⭐⭐ "Os sapatos são extremamente confortáveis e estilosos." – Ana R.</p>
             </div>
-        </section>
-
-        <section>
-            <h2>Precisa de uma dica de estilo?</h2>
-            <button onclick="showTip()">Obter Dica</button>
-            <p id="tip"></p>
         </section>
 
         <section id="contact">
             <h2>Entre em Contato</h2>
             <p>📧 Email: celdney12@gmail.com</p>
             <p>📞 Telefone: +351 927444593</p>
-            <p>📍 Localização: Entre o estilo e a confiança.</p>
+            <p>📍 Localização: Entre o estilo e a sofisticação.</p>
             <p><strong>Siga-nos:</strong>  
                 <a href="#">Facebook</a> | 
                 <a href="#">Instagram</a> | 
@@ -196,7 +202,8 @@
     </main>
 
     <footer>
-        &copy; 2025 Funky Fashion Hub. Todos os direitos reservados.
+        &copy; 2025 Funky Fashion Elite. Todos os direitos reservados.  
+        <br> <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a>
     </footer>
 
     <script>
@@ -207,23 +214,12 @@
 
         function changeImage(element, type) {
             let images = {
-                casual: "https://via.placeholder.com/450/ff6347", 
-                formal: "https://via.placeholder.com/450/4682b4",
-                shoes: "https://via.placeholder.com/450/32cd32",
-                accessories: "https://via.placeholder.com/450/ffa500"
+                casual: "https://via.placeholder.com/500/ff6347", 
+                formal: "https://via.placeholder.com/500/4682b4",
+                shoes: "https://via.placeholder.com/500/32cd32",
+                accessories: "https://via.placeholder.com/500/ffa500"
             };
             element.src = images[type];
-        }
-
-        function showTip() {
-            let tips = [
-                "A moda reflete quem você é. Use-a a seu favor.",
-                "O equilíbrio entre conforto e elegância é a chave do estilo.",
-                "Um bom acessório pode transformar seu visual.",
-                "Cores neutras são versáteis e atemporais.",
-                "O sapato certo faz toda a diferença no look."
-            ];
-            document.getElementById("tip").innerText = tips[Math.floor(Math.random() * tips.length)];
         }
     </script>
 
