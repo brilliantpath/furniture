@@ -65,7 +65,6 @@
             color: #222;
         }
 
-        /* Estilização do Carrossel */
         .carousel-container {
             position: relative;
             max-width: 600px;
@@ -109,13 +108,8 @@
             background: rgba(0, 0, 0, 0.9);
         }
 
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
 
         footer {
             background: #000;
@@ -137,74 +131,110 @@
 </head>
 <body>
 
-    <header>Funky Fashion Hub</header>
+<header>Funky Fashion Hub</header>
 
-    <nav>
-        <a href="#casual">Casual</a>
-        <a href="#formal">Formal</a>
-        <a href="#shoes">Calçados</a>
-        <a href="#accessories">Acessórios</a>
-        <a href="#trends">Tendências</a>
-        <a href="#gallery">Galeria</a>
-        <a href="#blog">Blog</a>
-        <a href="#reviews">Depoimentos</a>
-        <a href="#contact">Contato</a>
-    </nav>
+<nav>
+    <a href="#casual">Casual</a>
+    <a href="#formal">Formal</a>
+    <a href="#shoes">Calçados</a>
+    <a href="#accessories">Acessórios</a>
+    <a href="#trends">Tendências</a>
+    <a href="#gallery">Galeria</a>
+    <a href="#blog">Blog</a>
+    <a href="#reviews">Depoimentos</a>
+    <a href="#contact">Contato</a>
+</nav>
 
-    <main>
+<main>
 
-        <!-- Seção de Moda Casual -->
-        <section id="casual">
-            <h2>Moda Casual</h2>
-            <div class="carousel-container">
-                <button class="carousel-button prev" onclick="slide('casual', -1)">❮</button>
-                <div class="carousel" id="casual-carousel">
-                    <img src="https://via.placeholder.com/450" alt="Look Casual 1">
-                    <img src="https://via.placeholder.com/450" alt="Look Casual 2">
-                    <img src="https://via.placeholder.com/450" alt="Look Casual 3">
-                </div>
-                <button class="carousel-button next" onclick="slide('casual', 1)">❯</button>
+    <!-- Moda Casual -->
+    <section id="casual">
+        <h2>Moda Casual</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="slide('casual', -1)">❮</button>
+            <div class="carousel" id="casual-carousel">
+                <img src="https://via.placeholder.com/450" alt="Look Casual 1">
+                <img src="https://via.placeholder.com/450" alt="Look Casual 2">
+                <img src="https://via.placeholder.com/450" alt="Look Casual 3">
             </div>
-            <p class="carousel-description">Conforto e estilo para o dia a dia.</p>
-        </section>
+            <button class="carousel-button next" onclick="slide('casual', 1)">❯</button>
+        </div>
+        <p class="carousel-description">Conforto e estilo para o dia a dia.</p>
+    </section>
 
-        <!-- Seção de Moda Formal -->
-        <section id="formal">
-            <h2>Moda Formal</h2>
-            <div class="carousel-container">
-                <button class="carousel-button prev" onclick="slide('formal', -1)">❮</button>
-                <div class="carousel" id="formal-carousel">
-                    <img src="https://via.placeholder.com/450" alt="Look Formal 1">
-                    <img src="https://via.placeholder.com/450" alt="Look Formal 2">
-                    <img src="https://via.placeholder.com/450" alt="Look Formal 3">
-                </div>
-                <button class="carousel-button next" onclick="slide('formal', 1)">❯</button>
+    <!-- Moda Formal -->
+    <section id="formal">
+        <h2>Moda Formal</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="slide('formal', -1)">❮</button>
+            <div class="carousel" id="formal-carousel">
+                <img src="https://via.placeholder.com/450" alt="Look Formal 1">
+                <img src="https://via.placeholder.com/450" alt="Look Formal 2">
+                <img src="https://via.placeholder.com/450" alt="Look Formal 3">
             </div>
-            <p class="carousel-description">Elegância para eventos e negócios.</p>
-        </section>
+            <button class="carousel-button next" onclick="slide('formal', 1)">❯</button>
+        </div>
+        <p class="carousel-description">Elegância para eventos e negócios.</p>
+    </section>
 
-        <!-- Outras seções seguem o mesmo padrão -->
+    <!-- Calçados -->
+    <section id="shoes">
+        <h2>Calçados</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="slide('shoes', -1)">❮</button>
+            <div class="carousel" id="shoes-carousel">
+                <img src="https://via.placeholder.com/450" alt="Calçado 1">
+                <img src="https://via.placeholder.com/450" alt="Calçado 2">
+                <img src="https://via.placeholder.com/450" alt="Calçado 3">
+            </div>
+            <button class="carousel-button next" onclick="slide('shoes', 1)">❯</button>
+        </div>
+        <p class="carousel-description">Os melhores estilos para os seus pés.</p>
+    </section>
 
-    </main>
+    <!-- Acessórios -->
+    <section id="accessories">
+        <h2>Acessórios</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="slide('accessories', -1)">❮</button>
+            <div class="carousel" id="accessories-carousel">
+                <img src="https://via.placeholder.com/450" alt="Acessório 1">
+                <img src="https://via.placeholder.com/450" alt="Acessório 2">
+                <img src="https://via.placeholder.com/450" alt="Acessório 3">
+            </div>
+            <button class="carousel-button next" onclick="slide('accessories', 1)">❯</button>
+        </div>
+        <p class="carousel-description">Detalhes que fazem a diferença.</p>
+    </section>
 
-    <footer>
-        &copy; 2025 Funky Fashion Hub. Todos os direitos reservados.
-    </footer>
+    <!-- Tendências -->
+    <section id="trends">
+        <h2>Tendências</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="slide('trends', -1)">❮</button>
+            <div class="carousel" id="trends-carousel">
+                <img src="https://via.placeholder.com/450" alt="Tendência 1">
+                <img src="https://via.placeholder.com/450" alt="Tendência 2">
+                <img src="https://via.placeholder.com/450" alt="Tendência 3">
+            </div>
+            <button class="carousel-button next" onclick="slide('trends', 1)">❯</button>
+        </div>
+        <p class="carousel-description">O que está em alta no mundo da moda.</p>
+    </section>
 
-    <script>
-        let currentIndex = {
-            casual: 0,
-            formal: 0
-        };
+</main>
 
-        function slide(category, direction) {
-            const carousel = document.getElementById(`${category}-carousel`);
-            const images = carousel.children.length;
-            currentIndex[category] = (currentIndex[category] + direction + images) % images;
-            const offset = -currentIndex[category] * 100;
-            carousel.style.transform = `translateX(${offset}%)`;
-        }
-    </script>
+<footer>&copy; 2025 Funky Fashion Hub. Todos os direitos reservados.</footer>
+
+<script>
+    let currentIndex = { casual: 0, formal: 0, shoes: 0, accessories: 0, trends: 0 };
+    function slide(category, direction) {
+        const carousel = document.getElementById(`${category}-carousel`);
+        const images = carousel.children.length;
+        currentIndex[category] = (currentIndex[category] + direction + images) % images;
+        carousel.style.transform = `translateX(-${currentIndex[category] * 100}%)`;
+    }
+</script>
 
 </body>
 </html>
