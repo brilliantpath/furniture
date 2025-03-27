@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funky Fashion Hub</title>
+    <title>Funky Home Hub</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Arial', sans-serif; /* Changed to a more modern font */
         }
 
         body {
-            background-color: #f8f8f8;
+            background-color: #f0f4f8; /* Softer background color */
             color: #333;
             text-align: center;
         }
 
         header {
-            background: #000;
+            background: #2c3e50; /* Darker header */
             color: white;
-            padding: 25px 0;
-            font-size: 24px;
+            padding: 30px 0; /* Increased padding */
+            font-size: 28px; /* Increased font size */
             font-weight: bold;
             letter-spacing: 1px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added shadow */
         }
 
         nav {
-            background: #222;
+            background: #34495e; /* Darker navigation */
             padding: 15px;
             text-align: center;
         }
 
         nav a {
-            color: white;
+            color: #ecf0f1; /* Lighter link color */
             text-decoration: none;
             margin: 15px;
             font-size: 18px;
@@ -43,12 +44,13 @@
         }
 
         nav a:hover {
-            color: #f4a261;
+            color: #f39c12; /* Accent color on hover */
         }
 
         main {
             max-width: 1200px;
             margin: 40px auto;
+            padding: 0 20px; /* Added padding for better spacing */
         }
 
         section {
@@ -56,13 +58,18 @@
             padding: 40px;
             margin-bottom: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+            transition: transform 0.3s; /* Added transition for hover effect */
+        }
+
+        section:hover {
+            transform: translateY(-5px); /* Subtle lift effect on hover */
         }
 
         h2 {
             margin-bottom: 20px;
-            font-size: 26px;
-            color: #222;
+            font-size: 28px; /* Increased heading size */
+            color: #2c3e50; /* Darker heading color */
         }
 
         .carousel-container {
@@ -86,7 +93,7 @@
 
         .carousel-description {
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 18px; /* Increased description size */
             color: #555;
         }
 
@@ -99,7 +106,7 @@
             border: none;
             padding: 10px 15px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 20px; /* Increased button size */
             border-radius: 5px;
             transition: background 0.3s;
         }
@@ -112,7 +119,7 @@
         .next { right: 10px; }
 
         footer {
-            background: #000;
+            background: #2c3e50; /* Darker footer */
             color: white;
             padding: 20px;
             margin-top: 40px;
@@ -120,25 +127,44 @@
         }
 
         a {
-            color: #f4a261;
+            color: #f39c12; /* Accent color for links */
             text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
         }
+
+        /* Carousel indicators */
+        .carousel-indicators {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #bdc3c7; /* Inactive indicator color */
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #f39c12; /* Active indicator color */
+        }
     </style>
 </head>
 <body>
 
-<header>Funky Fashion Hub</header>
+<header>Funky Home Hub</header>
 
 <nav>
-    <a href="#casual">Casual</a>
-    <a href="#formal">Formal</a>
-    <a href="#shoes">Calçados</a>
-    <a href="#accessories">Acessórios</a>
-    <a href="#trends">Tendências</a>
+    <a href="#kitchen">Cozinha</a>
+    <a href="#living-room">Sala de Estar</a>
+    <a href="#toilet">Banheiro</a>
+    <a href="#bedroom">Quarto</a>
     <a href="#gallery">Galeria</a>
     <a href="#blog">Blog</a>
     <a href="#reviews">Depoimentos</a>
@@ -147,92 +173,113 @@
 
 <main>
 
-    <!-- Moda Casual -->
-    <section id="casual">
-        <h2>Moda Casual</h2>
+    <!-- Cozinha -->
+    <section id="kitchen">
+        <h2>Cozinha</h2>
         <div class="carousel-container">
-            <button class="carousel-button prev" onclick="slide('casual', -1)">❮</button>
-            <div class="carousel" id="casual-carousel">
-                <img src="https://via.placeholder.com/450" alt="Look Casual 1">
-                <img src="https://via.placeholder.com/450" alt="Look Casual 2">
-                <img src="https://via.placeholder.com/450" alt="Look Casual 3">
+            <button class="carousel-button prev" onclick="slide('kitchen', -1)">❮</button>
+            <div class="carousel" id="kitchen-carousel">
+                <img src="https://via.placeholder.com/450" alt="Cozinha 1">
+                <img src="https://via.placeholder.com/450" alt="Cozinha 2">
+                <img src="https://via.placeholder.com/450" alt="Cozinha 3">
             </div>
-            <button class="carousel-button next" onclick="slide('casual', 1)">❯</button>
+            <button class="carousel-button next" onclick="slide('kitchen', 1)">❯</button>
         </div>
-        <p class="carousel-description">Conforto e estilo para o dia a dia.</p>
+        <div class="carousel-indicators" id="kitchen-indicators">
+            <span class="indicator active" onclick="setSlide('kitchen', 0)"></span>
+            <span class="indicator" onclick="setSlide('kitchen', 1)"></span>
+            <span class="indicator" onclick="setSlide('kitchen', 2)"></span>
+        </div>
+        <p class="carousel-description">Inspire-se para criar uma cozinha dos sonhos.</p>
     </section>
 
-    <!-- Moda Formal -->
-    <section id="formal">
-        <h2>Moda Formal</h2>
+    <!-- Sala de Estar -->
+    <section id="living-room">
+        <h2>Sala de Estar</h2>
         <div class="carousel-container">
-            <button class="carousel-button prev" onclick="slide('formal', -1)">❮</button>
-            <div class="carousel" id="formal-carousel">
-                <img src="https://via.placeholder.com/450" alt="Look Formal 1">
-                <img src="https://via.placeholder.com/450" alt="Look Formal 2">
-                <img src="https://via.placeholder.com/450" alt="Look Formal 3">
+            <button class="carousel-button prev" onclick="slide('living-room', -1)">❮</button>
+            <div class="carousel" id="living-room-carousel">
+                <img src="https://via.placeholder.com/450" alt="Sala de Estar 1">
+                <img src="https://via.placeholder.com/450" alt="Sala de Estar 2">
+                <img src="https://via.placeholder.com/450" alt="Sala de Estar 3">
             </div>
-            <button class="carousel-button next" onclick="slide('formal', 1)">❯</button>
+            <button class="carousel-button next" onclick="slide('living-room', 1)">❯</button>
         </div>
-        <p class="carousel-description">Elegância para eventos e negócios.</p>
+        <div class="carousel-indicators" id="living-room-indicators">
+            <span class="indicator active" onclick="setSlide('living-room', 0)"></span>
+            <span class="indicator" onclick="setSlide('living-room', 1)"></span>
+            <span class="indicator" onclick="setSlide('living-room', 2)"></span>
+        </div>
+        <p class="carousel-description">Transforme sua sala em um lugar acolhedor.</p>
     </section>
 
-    <!-- Calçados -->
-    <section id="shoes">
-        <h2>Calçados</h2>
+    <!-- Banheiro -->
+    <section id="toilet">
+        <h2>Banheiro</h2>
         <div class="carousel-container">
-            <button class="carousel-button prev" onclick="slide('shoes', -1)">❮</button>
-            <div class="carousel" id="shoes-carousel">
-                <img src="https://via.placeholder.com/450" alt="Calçado 1">
-                <img src="https://via.placeholder.com/450" alt="Calçado 2">
-                <img src="https://via.placeholder.com/450" alt="Calçado 3">
+            <button class="carousel-button prev" onclick="slide('toilet', -1)">❮</button>
+            <div class="carousel" id="toilet-carousel">
+                <img src="https://via.placeholder.com/450" alt="Banheiro 1">
+                <img src="https://via.placeholder.com/450" alt="Banheiro 2">
+                <img src="https://via.placeholder.com/450" alt="Banheiro 3">
             </div>
-            <button class="carousel-button next" onclick="slide('shoes', 1)">❯</button>
+            <button class="carousel-button next" onclick="slide('toilet', 1)">❯</button>
         </div>
-        <p class="carousel-description">Os melhores estilos para os seus pés.</p>
+        <div class="carousel-indicators" id="toilet-indicators">
+            <span class="indicator active" onclick="setSlide('toilet', 0)"></span>
+            <span class="indicator" onclick="setSlide('toilet', 1)"></span>
+            <span class="indicator" onclick="setSlide('toilet', 2)"></span>
+        </div>
+        <p class="carousel-description">Designs elegantes e funcionais para o seu banheiro.</p>
     </section>
 
-    <!-- Acessórios -->
-    <section id="accessories">
-        <h2>Acessórios</h2>
+        <!-- Quarto -->
+    <section id="bedroom">
+        <h2>Quarto</h2>
         <div class="carousel-container">
-            <button class="carousel-button prev" onclick="slide('accessories', -1)">❮</button>
-            <div class="carousel" id="accessories-carousel">
-                <img src="https://via.placeholder.com/450" alt="Acessório 1">
-                <img src="https://via.placeholder.com/450" alt="Acessório 2">
-                <img src="https://via.placeholder.com/450" alt="Acessório 3">
+            <button class="carousel-button prev" onclick="slide('bedroom', -1)">❮</button>
+            <div class="carousel" id="bedroom-carousel">
+                <img src="https://via.placeholder.com/450" alt="Quarto 1">
+                <img src="https://via.placeholder.com/450" alt="Quarto 2">
+                <img src="https://via.placeholder.com/450" alt="Quarto 3">
             </div>
-            <button class="carousel-button next" onclick="slide('accessories', 1)">❯</button>
+            <button class="carousel-button next" onclick="slide('bedroom', 1)">❯</button>
         </div>
-        <p class="carousel-description">Detalhes que fazem a diferença.</p>
-    </section>
-
-    <!-- Tendências -->
-    <section id="trends">
-        <h2>Tendências</h2>
-        <div class="carousel-container">
-            <button class="carousel-button prev" onclick="slide('trends', -1)">❮</button>
-            <div class="carousel" id="trends-carousel">
-                <img src="https://via.placeholder.com/450" alt="Tendência 1">
-                <img src="https://via.placeholder.com/450" alt="Tendência 2">
-                <img src="https://via.placeholder.com/450" alt="Tendência 3">
-            </div>
-            <button class="carousel-button next" onclick="slide('trends', 1)">❯</button>
+        <div class="carousel-indicators" id="bedroom-indicators">
+            <span class="indicator active" onclick="setSlide('bedroom', 0)"></span>
+            <span class="indicator" onclick="setSlide('bedroom', 1)"></span>
+            <span class="indicator" onclick="setSlide('bedroom', 2)"></span>
         </div>
-        <p class="carousel-description">O que está em alta no mundo da moda.</p>
+        <p class="carousel-description">Crie um ambiente tranquilo e confortável.</p>
     </section>
 
 </main>
 
-<footer>&copy; 2025 Funky Fashion Hub. Todos os direitos reservados.</footer>
+<footer>&copy; 2025 Funky Home Hub. Todos os direitos reservados.</footer>
 
 <script>
-    let currentIndex = { casual: 0, formal: 0, shoes: 0, accessories: 0, trends: 0 };
+    let currentIndex = { kitchen: 0, livingRoom: 0, toilet: 0, bedroom: 0 };
+    
     function slide(category, direction) {
         const carousel = document.getElementById(`${category}-carousel`);
         const images = carousel.children.length;
         currentIndex[category] = (currentIndex[category] + direction + images) % images;
         carousel.style.transform = `translateX(-${currentIndex[category] * 100}%)`;
+        updateIndicators(category);
+    }
+
+    function setSlide(category, index) {
+        currentIndex[category] = index;
+        const carousel = document.getElementById(`${category}-carousel`);
+        carousel.style.transform = `translateX(-${currentIndex[category] * 100}%)`;
+        updateIndicators(category);
+    }
+
+    function updateIndicators(category) {
+        const indicators = document.querySelectorAll(`#${category}-indicators .indicator`);
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentIndex[category]);
+        });
     }
 </script>
 
